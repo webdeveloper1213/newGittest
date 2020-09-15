@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Aligning 2 divs using flexbox</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+    <style>
+        html {
+            font-size: 62.5%;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: blanchedalmond;
+        }
+
+
+        .about-us {
+            padding-top: 10rem;
+            display: flex;
+
+
+        }
+
+        .about-us-content {
+            flex: 0 1 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about-us-image {
+            flex: 1 1;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .about-us-heading {
+            font-size: 4rem;
+            font-weight: 300;
+            font-family: sans-serif;
+            letter-spacing: .2rem;
+            margin: 0;
+            padding-bottom: 2rem;
+            color: darkgoldenrod;
+        }
+
+        .small-underline {
+            width: 9rem;
+            height: .1rem;
+            background-color: black;
+            margin: 0 auto 1rem auto;
+        }
+
+        .big-underline {
+            width: 20rem;
+            height: .1rem;
+            background-color: black;
+        }
+
+        .sub-heading {
+            font-size: 3rem;
+            font-weight: 100;
+            letter-spacing: .1rem;
+            margin: 2rem 0;
+
+        }
+
+        .about-us-paragraph {
+            font-size: 1.5rem;
+            line-height: 1.8rem;
+        }
+
+        .about-us-button {
+            width: 20rem;
+            padding: 1.2rem 2rem;
+            font-size: 1.5rem;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            background: linear-gradient(to right, gold, goldenrod);
+            animation: anim 1s 1s backwards;
+        }
+
+        .about-us-button:hover {
+            background: linear-gradient(to left, gold, goldenrod);
+        }
+
+        @keyframes anim {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @media screen and (max-width:768px) {
+            .about-us {
+                flex-direction: column;
+            }
+
+            .about-us-button {
+                margin-bottom: 2rem;
+                width: 15rem;
+            }
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+    <section class="about-us">
+        <section class="about-us-content">
+            <h1 class="about-us-heading">About Us</h1>
+            <div class="underline">
+                <div class="small-underline"></div>
+                <div class="big-underline"></div>
+            </div>
+            <h3 class="sub-heading">Web Development</h3>
+            <p class="about-us-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque tempore, minus fugiat quibusdam aliquid! Cumque corporis error minus iusto sequi officiis quod animi placeat nam laboriosam dolorem a nulla, itaque!</p>
+            <button class="about-us-button">Learn More..</button>
+
+        </section>
+
+        <section class="about-us-image">
+            <div class="image"><img src="img/aboutflex.jpg" alt="about us image"></div>
+        </section>
+
+    </section>
+
+</body>
+
+</html>
